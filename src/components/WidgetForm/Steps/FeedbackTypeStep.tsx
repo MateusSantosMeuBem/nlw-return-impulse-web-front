@@ -4,20 +4,13 @@ import { CloseButton } from "../../CloseButton";
 
 interface FeedbackTypeStepsProps {
     onFeedbackTypeChanged: (type: FeedbackTypes) => void;
-    onFeedbackRestartRequested: () => void;
 }
 
-export function FeedbackTypeSteps({ onFeedbackTypeChanged, onFeedbackRestartRequested }: FeedbackTypeStepsProps){
+export function FeedbackTypeSteps({ onFeedbackTypeChanged}: FeedbackTypeStepsProps){
     return(
         <>
             <header>
-                <button
-                    className="left-5 top-5 absolute text-zinc-400 hover:text-zinc-100"
-                    type="button"
-                    onClick={onFeedbackRestartRequested}
-                >
-                    <ArrowLeft weight="bold" className="w-4 h-4"/>
-                </button>
+                
                 <span className="text-xl leading-6">Deixe seu feedback</span>
                 <CloseButton/>
             </header>
